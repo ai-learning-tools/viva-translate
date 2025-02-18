@@ -69,7 +69,7 @@ Before compiling the project, you should configure the environment variables. Co
 
 ```
 ENVIRONMENT="development" or "production"
-DEEPL_API_KEY=DEEPL API Key for translations
+DEEPL_KEY=DEEPL API Key for translations
 OPENAI_KEY=OpenAI API Key for AI Summaries using gpt-4o-mini
 GLADIA_KEY=Gladia.ai API Key for transcriptions
 MAX_TEXT_LENGTH=Maximum text length for translations in popup and highlight to translate (Recommended value is 7500)
