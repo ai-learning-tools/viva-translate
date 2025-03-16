@@ -1,0 +1,103 @@
+@import 'common/variables';
+
+body {
+  background-color: $vi-dark-purple;
+  color: $vi-white;
+  font-family: $vi-text-font;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: $vi-white;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: $vi-white;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.option-container {
+  background-color: rgba($vi-grey, 0.1);
+  border: 1px solid $vi-grey;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 16px;
+
+  label {
+    color: $vi-white;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  input,
+  select {
+    background-color: transparent;
+    border: 1px solid $vi-grey;
+    border-radius: 4px;
+    color: $vi-white;
+    font-family: $vi-text-font;
+    font-size: 14px;
+    outline: none;
+    padding: 8px 12px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: $vi-purple;
+    }
+
+    &::placeholder {
+      color: rgba($vi-grey, 0.6);
+    }
+  }
+
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    padding-right: 32px;
+
+    option {
+      background-color: $vi-dark-purple;
+      color: $vi-white;
+    }
+  }
+}
+
+#status {
+  color: $vi-purple;
+  font-size: 14px;
+  margin-top: 16px;
+  text-align: center;
+  min-height: 20px;
+}
+
+.env-notice {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}

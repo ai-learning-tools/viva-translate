@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google" content="notranslate" />
+  <title data-viva-i18n="settings.title">Viva Translate Settings</title>
+  <link rel="stylesheet" href="./options-styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 data-viva-i18n="settings.title">Viva Translate Settings</h1>
+    <div class="section">
+      <h2 data-viva-i18n="settings.language.title">Language Settings</h2>
+      <div class="option-container">
+        <label for="target-language" data-viva-i18n="settings.language.target">Translation Language</label>
+        <select id="target-language" class="language-select">
+          <option value="DE">Deutsch</option>
+          <option value="EN">English</option>
+          <option value="ES">Español</option>
+          <option value="FR">Français</option>
+          <option value="IT">Italiano</option>
+          <option value="JA">日本語</option>
+          <option value="PT">Português</option>
+          <option value="ZH">中文</option>
+        </select>
+      </div>
+    </div>
+    <div class="section">
+      <h2 data-viva-i18n="settings.api_keys.title">API Keys</h2>
+      <div class="option-container" id="gladia-container">
+        <label for="gladia-key" data-viva-i18n="settings.api_keys.gladia">Gladia API Key</label>
+        <input type="text" id="gladia-key" data-viva-i18n="settings.api_keys.placeholder"
+          placeholder="Enter API Key">
+      </div>
+      <div class="option-container" id="deepl-container">
+        <label for="deepl-key" data-viva-i18n="settings.api_keys.deepl">DeepL API Key</label>
+        <input type="text" id="deepl-key" data-viva-i18n="settings.api_keys.placeholder"
+          placeholder="Enter API Key">
+      </div>
+      <div class="option-container" id="openai-container">
+        <label for="openai-key" data-viva-i18n="settings.api_keys.openai">OpenAI API Key</label>
+        <input type="text" id="openai-key" data-viva-i18n="settings.api_keys.placeholder"
+          placeholder="Enter API Key">
+      </div>
+    </div>
+    <div id="status"></div>
+  </div>
+  <script src="options.bundle.js"></script>
+</body>
+</html>
