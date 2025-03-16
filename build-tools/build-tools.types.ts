@@ -1,9 +1,9 @@
 type ConfigObject = {
   NODE_ENV: string;
   ENVIRONMENT: string;
-  DEEPL_KEY: string;
-  GLADIA_KEY: string;
-  OPENAI_KEY: string;
+  DEEPL_KEY?: string;
+  GLADIA_KEY?: string;
+  OPENAI_KEY?: string;
   MAX_TEXT_LENGTH: number;
 };
 

@@ -21,10 +21,10 @@ function getBuildEnv(baseDirectory) {
   const CONFIG_MODULE = {
     NODE_ENV: process.env.NODE_ENV || 'development',
     ENVIRONMENT: process.env.ENVIRONMENT || 'development',
-    DEEPL_KEY: process.env.DEEPL_KEY ?? '',
-    GLADIA_KEY: process.env.GLADIA_KEY ?? '',
-    OPENAI_KEY: process.env.OPENAI_KEY ?? '',
-    MAX_TEXT_LENGTH: parseInt(process.env.MAX_TEXT_LENGTH ?? '7500',10),
+    DEEPL_KEY: process.env.DEEPL_KEY,
+    GLADIA_KEY: process.env.GLADIA_KEY,
+    OPENAI_KEY: process.env.OPENAI_KEY,
+    MAX_TEXT_LENGTH: parseInt(process.env.MAX_TEXT_LENGTH ?? '7500', 10),
   };
 
   /** @type import('./build-tools.types').BuildEnv */
