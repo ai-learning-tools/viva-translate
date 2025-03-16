@@ -8,6 +8,7 @@
   "permissions": ["activeTab", "storage", "tabs", "tabCapture", "offscreen", "scripting", "downloads", "<all_urls>"],
   "host_permissions": ["<all_urls>"],
   "icons": { "128": "/images/viva-logo.png" },
+  "options_page": "options.html",
   "web_accessible_resources": [
     {
       "resources": [

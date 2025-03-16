@@ -143,6 +143,22 @@
       "startTime": "Hora de início",
       "transcriptions": "Transcrições",
       "summary": "Resumo"
+    },
+    "settings": {
+      "title": "Configurações do Viva Translate",
+      "language": {
+        "title": "Configurações de idioma",
+        "target": "Idioma de tradução"
+      },
+      "api_keys": {
+        "title": "Chaves API",
+        "gladia": "Chave API Gladia",
+        "deepl": "Chave API DeepL",
+        "placeholder": "Digite a chave API",
+        "env_defined": "Valor definido nas variáveis de ambiente"
+      },
+      "saved": "Configurações salvas.",
+      "error": "Erro ao salvar as configurações."
     }
   }
 }

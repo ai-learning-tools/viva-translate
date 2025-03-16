@@ -36,7 +36,8 @@ function getPromptResponseInstructions(feature: AIFeatures, maxItems: number = 5
 export default async function generateAIFeature(
   feature: AIFeatures,
   transcriptions: string,
-  regenerate: boolean = false
+  regenerate: boolean = false,
+  openaiKey?: string
 ): Promise<string[]> {
   const prompt = `${Prompts[feature]} ${getPromptResponseInstructions(feature, regenerate ? 5 : 2, undefined)}`;
 
@@ -45,12 +46,13 @@ export default async function generateAIFeature(
     messages: [{ role: 'system', content: prompt }, { role: 'user', content: transcriptions }]
   };
 
+  const key = config.OPENAI_KEY ?? openaiKey;
   try {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${config.OPENAI_KEY}`
+        Authorization: `Bearer ${key}`
       },
       body: JSON.stringify(data)
     });

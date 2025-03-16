@@ -143,6 +143,22 @@
       "startTime": "开始时间",
       "transcriptions": "转录",
       "summary": "摘要"
+    },
+    "settings": {
+      "title": "Viva Translate 设置",
+      "language": {
+        "title": "语言设置",
+        "target": "翻译语言"
+      },
+      "api_keys": {
+        "title": "API 密钥",
+        "gladia": "Gladia API 密钥",
+        "deepl": "DeepL API 密钥",
+        "placeholder": "请输入 API 密钥",
+        "env_defined": "值在环境变量中定义"
+      },
+      "saved": "设置已保存。",
+      "error": "保存设置时出错。"
     }
   }
 }

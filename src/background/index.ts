@@ -71,7 +71,12 @@ const handleExtensionMessage = (request: RequestType, sender: any, sendResponse:
       break;
 
     case WorkerEvents.TRANSLATE: {
-      translateText(request.texts, request.targetLang).then((translations) => {
+      translateText(
+        request.texts,
+        request.targetLang,
+        undefined,
+        StorageCtrl.getItem(Store.DEEPL_KEY)
+      ).then((translations) => {
         sendResponse({ translations });
       }).catch(() => {
         sendResponse({ error: 'translation-failed' });
@@ -87,7 +92,12 @@ const handleExtensionMessage = (request: RequestType, sender: any, sendResponse:
           const results: Record<string, string[]> = {};
           results[Languages.EN] = summaries;
           if (request.lang !== Languages.EN) {
-            const translations = await translateText(summaries, request.lang, Languages.EN);
+            const translations = await translateText(
+              summaries,
+              request.lang,
+              Languages.EN,
+              StorageCtrl.getItem(Store.DEEPL_KEY)
+            );
             items = translations.map((translation) => translation.text);
             results[request.lang] = items;
           }
