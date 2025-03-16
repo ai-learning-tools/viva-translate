@@ -4,7 +4,6 @@ import { errorLog } from '../common/utils/logger';
 
 const FREE_API = 'https://api-free.deepl.com';
 const PRO_API = 'https://api.deepl.com';
-const DEEPL_URL = config.DEEPL_KEY.endsWith(':fx') || config.DEEPL_KEY === '' ? FREE_API : PRO_API;
 
 /**
  * Call DeepL API to translate text
@@ -12,14 +11,22 @@ const DEEPL_URL = config.DEEPL_KEY.endsWith(':fx') || config.DEEPL_KEY === '' ? 
  * @param texts
  * @param targetLang
  * @param sourceLang
+ * @param deeplKey
  * @returns
  */
-async function translateText(texts: string[], targetLang: string, sourceLang?: string): Promise<Translation[]> {
+async function translateText(
+  texts: string[],
+  targetLang: string,
+  sourceLang?: string,
+  deeplKey?: string
+): Promise<Translation[]> {
+  const key = config.DEEPL_KEY ?? deeplKey;
+  const DEEPL_URL = !key || key.endsWith(':fx') || key === '' ? FREE_API : PRO_API;
   try {
     const response = await fetch(`${DEEPL_URL}/v2/translate`, {
       method: 'POST',
       headers: {
-        Authorization: `DeepL-Auth-Key ${config.DEEPL_KEY}`,
+        Authorization: `DeepL-Auth-Key ${key}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({

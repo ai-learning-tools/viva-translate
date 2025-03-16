@@ -40,7 +40,7 @@ class I18n {
   }
 
   /**
-   * Initiailze the language
+   * Initialize the language
    * @param listenChanges
    */
   public async init(listenChanges = true): Promise<any> {
@@ -68,7 +68,7 @@ class I18n {
   // eslint-disable-next-line class-methods-use-this
   public getCodeFromTargetLang(target: string): string {
     const langCode = (Object.keys(TargetLanguage) as (keyof typeof TargetLanguage)[]).find(
-      (key) => TargetLanguage[key as keyof typeof TargetLanguage] === target
+      (key) => TargetLanguage[key] === target
     );
     return langCode ?? target;
   }
@@ -111,7 +111,7 @@ class I18n {
   // eslint-disable-next-line class-methods-use-this
   public t(key: string, element?: Element, options?: Object | undefined): string {
     if (element) element.setAttribute('data-viva-i18n', key);
-    return i18next.t(key, options as any) as any;
+    return i18next.t(key, options as any) as string;
   }
 
   /**

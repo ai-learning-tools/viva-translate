@@ -3,8 +3,9 @@ import { IInterim } from './types';
 import { debugLog, errorLog } from './utils/logger';
 import Settings from './utils/Settings';
 import { translateText } from './api';
-import { Languages, VADEvents } from './constants';
+import { Languages, VADEvents, Store } from './constants';
 import EventEmitter from './utils/EventEmitter';
+import StorageCtrl from './Storage';
 
 const GLADIA_WSS = 'wss://api.gladia.io/audio/text/audio-transcription';
 
@@ -83,9 +84,10 @@ class Gladia extends EventEmitter {
    */
   private onOpen() {
     if (!this.wss) return;
+    const key = config.GLADIA_KEY ?? StorageCtrl.getItem(Store.GLADIA_KEY);
     /* After opening the connection, send the configuration packet */
     this.wss.send(JSON.stringify({
-      x_gladia_key: config.GLADIA_KEY,
+      x_gladia_key: key,
       encoding: 'WAV/PCM',
       bit_depth: 16,
       sample_rate: 16000,
