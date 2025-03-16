@@ -143,6 +143,23 @@
       "startTime": "Start time",
       "transcriptions": "Transcriptions",
       "summary": "Summary"
+    },
+    "settings": {
+      "title": "Viva Translate Settings",
+      "language": {
+        "title": "Language Settings",
+        "target": "Translation Language"
+      },
+      "api_keys": {
+        "title": "API Keys",
+        "gladia": "Gladia API Key",
+        "deepl": "DeepL API Key",
+        "openai": "OpenAI API Key",
+        "placeholder": "Enter API Key",
+        "env_defined": "Value defined in environment variables"
+      },
+      "saved": "Options saved.",
+      "error": "Error saving options."
     }
   }
 }

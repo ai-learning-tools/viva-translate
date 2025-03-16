@@ -143,6 +143,22 @@
       "startTime": "開始時間",
       "transcriptions": "トランスクリプション",
       "summary": "概要"
+    },
+    "settings": {
+      "title": "Viva Translate 設定",
+      "language": {
+        "title": "言語設定",
+        "target": "翻訳言語"
+      },
+      "api_keys": {
+        "title": "API キー",
+        "gladia": "Gladia API キー",
+        "deepl": "DeepL API キー",
+        "placeholder": "API キーを入力してください",
+        "env_defined": "環境変数で定義されています"
+      },
+      "saved": "設定が保存されました。",
+      "error": "設定の保存に失敗しました。"
     }
   }
 }

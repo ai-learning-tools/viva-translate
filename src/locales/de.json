@@ -143,6 +143,23 @@
       "startTime": "Startzeit",
       "transcriptions": "Umschreibungen",
       "summary": "Zusammenfassung"
+    },
+    "settings": {
+      "title": "Viva Translate Einstellungen",
+      "language": {
+        "title": "Spracheinstellungen",
+        "target": "Übersetzungssprache"
+      },
+      "api_keys": {
+        "title": "API-Schlüssel",
+        "gladia": "Gladia API-Schlüssel",
+        "deepl": "DeepL API-Schlüssel",
+        "openai": "OpenAI API-Schlüssel",
+        "placeholder": "API-Schlüssel eingeben",
+        "env_defined": "Wert in Umgebungsvariablen definiert"
+      },
+      "saved": "Einstellungen gespeichert.",
+      "error": "Fehler beim Speichern der Einstellungen."
     }
   }
 }
