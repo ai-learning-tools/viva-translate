@@ -1,6 +1,6 @@
 import config from '@config';
 import { errorLog } from '../common/utils/logger';
-import { Store, Languages } from '../common/constants';
+import { Store, Languages, Icons } from '../common/constants';
 import StorageCtrl from '../common/Storage';
 import I18n from '../common/utils/language';
 
@@ -35,6 +35,24 @@ const updateEnvNotice = (key: string, envValue: string | undefined) => {
       `;
     }
   }
+};
+
+// Toggle password visibility
+const setupVisibilityToggles = () => {
+  const buttons = document.querySelectorAll('.toggle-visibility');
+  buttons.forEach((button) => {
+    const input = button.parentElement?.querySelector('input') as HTMLInputElement;
+    if (!input) return;
+
+    // Set initial state
+    input.type = 'password';
+    button.innerHTML = Icons.SHOW_KEY;
+    button.addEventListener('click', () => {
+      const isVisible = input.type === 'text';
+      input.type = isVisible ? 'password' : 'text';
+      button.innerHTML = isVisible ? Icons.SHOW_KEY : Icons.HIDE_KEY;
+    });
+  });
 };
 
 /**
@@ -130,6 +148,8 @@ const initializeOptionsCallbacks = async () => {
   const deeplInput = document.getElementById('deepl-key') as HTMLInputElement;
   const openaiInput = document.getElementById('openai-key') as HTMLInputElement;
   const targetLanguageSelect = document.getElementById('target-language') as HTMLSelectElement;
+
+  setupVisibilityToggles();
 
   // Update environment notices and input values
   updateEnvNotice('gladia', config.GLADIA_KEY);

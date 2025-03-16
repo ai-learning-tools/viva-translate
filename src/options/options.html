@@ -29,18 +29,24 @@
       <h2 data-viva-i18n="settings.api_keys.title">API Keys</h2>
       <div class="option-container" id="gladia-container">
         <label for="gladia-key" data-viva-i18n="settings.api_keys.gladia">Gladia API Key</label>
-        <input type="text" id="gladia-key" data-viva-i18n="settings.api_keys.placeholder"
-          placeholder="Enter API Key">
+        <div class="input-container">
+          <input type="password" id="gladia-key" data-viva-i18n-placeholder="settings.api_keys.placeholder" placeholder="Enter API Key">
+          <button type="button" class="toggle-visibility" aria-label="Toggle visibility"></button>
+        </div>
       </div>
       <div class="option-container" id="deepl-container">
         <label for="deepl-key" data-viva-i18n="settings.api_keys.deepl">DeepL API Key</label>
-        <input type="text" id="deepl-key" data-viva-i18n="settings.api_keys.placeholder"
-          placeholder="Enter API Key">
+        <div class="input-container">
+          <input type="password" id="deepl-key" data-viva-i18n-placeholder="settings.api_keys.placeholder" placeholder="Enter API Key">
+          <button type="button" class="toggle-visibility" aria-label="Toggle visibility"></button>
+        </div>
       </div>
       <div class="option-container" id="openai-container">
         <label for="openai-key" data-viva-i18n="settings.api_keys.openai">OpenAI API Key</label>
-        <input type="text" id="openai-key" data-viva-i18n="settings.api_keys.placeholder"
-          placeholder="Enter API Key">
+        <div class="input-container">
+          <input type="password" id="openai-key" data-viva-i18n-placeholder="settings.api_keys.placeholder" placeholder="Enter API Key">
+          <button type="button" class="toggle-visibility" aria-label="Toggle visibility"></button>
+        </div>
       </div>
     </div>
     <div id="status"></div>
